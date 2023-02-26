@@ -1,5 +1,6 @@
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
+import './style.css';
 
 const Footer = () => {
   const location = useLocation();
@@ -15,6 +16,16 @@ const Footer = () => {
             &larr; Go Back
           </button>
         )}
+      <h4>
+        <Link
+        to="/chatbot"
+        title="chatbot page"
+        className="chatbot-button"
+      >
+        Click here to connect with a Chatter
+      </Link>
+      </h4>
+
         <h4>
           Made with{' '}
           <span
@@ -25,7 +36,7 @@ const Footer = () => {
           >
             🧠
           </span>{' '}
-          by the Brandon McCauley.
+          by Brandon McCauley.
         </h4>
       </div>
     </footer>

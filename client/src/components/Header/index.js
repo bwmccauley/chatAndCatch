@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
+import './style.css';
 
 const Header = () => {
   const logout = (event) => {
@@ -15,7 +16,7 @@ const Header = () => {
           <Link className="text-light" to="/">
             <h1 className="m-0">CHATty Cathy </h1>
           </Link>
-          <p className="m-0">omg, shut up</p>
+          <p className="m-0"></p>
         </div>
         <div>
           {Auth.loggedIn() ? (
