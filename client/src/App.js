@@ -15,7 +15,7 @@ import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import chatBot from './pages/chatbot';
+import ChatBot from './pages/chatbot';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -74,8 +74,8 @@ function App() {
                 element={<SingleThought />}
               />
               <Route
-              path="/chatbot"
-              element={<chatbot />}
+              path="/meme"
+              element={<ChatBot />}
               />
             </Routes>
           </div>

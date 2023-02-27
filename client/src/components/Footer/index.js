@@ -22,9 +22,9 @@ const Footer = () => {
         )}
       <h4>
         <Link
-        to="/chatbot"
-        title="chatbot page"
-        className="chatbot-button"
+        to="/meme"
+        title="meme page"
+        className="meme-button"
       >
         <img src={imgSrc} alt={'test icon'} style={imgStyle}/>
         Click here to connect with a Chatter
