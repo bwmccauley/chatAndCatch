@@ -1,5 +1,10 @@
 .chatbot-button{
-    background: white;
+    background: rgb(243, 255, 19);
     border: 1px solid gold;
     border-radius: grey;
+}
+.chatbot-button{
+    background: gold;
+    text-decoration: none;
+    color: black;
 }
