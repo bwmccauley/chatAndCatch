@@ -14,8 +14,11 @@ const Header = () => {
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
           <Link className="text-light" to="/">
-            <h1 className="m-0">CHATty Cathy </h1>
+            <h1 className="m-10">Meme Macrocosm</h1>
           </Link>
+          <Link className="btn btn-lg btn-light m-2" to="/meme">
+                Spawn Meme
+              </Link>
           <p className="m-0"></p>
         </div>
         <div>
