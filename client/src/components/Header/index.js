@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
 import './style.css';
+import imgSrc from './rainbow.png';
+
 
 const Header = () => {
   const logout = (event) => {
@@ -17,6 +19,7 @@ const Header = () => {
             <h1 className="m-10">Meme Macrocosm</h1>
           </Link>
           <Link className="btn btn-lg btn-light m-2" to="/meme">
+          <img src={imgSrc} width={50} height={50} alt={'test icon'} />
                 Spawn Meme
               </Link>
           <p className="m-0"></p>

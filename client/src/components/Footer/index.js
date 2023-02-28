@@ -22,12 +22,12 @@ const Footer = () => {
         )}
       <h4>
         <Link
-        to="/meme"
-        title="meme page"
-        className="meme-button"
+        to="/chat"
+        title="chat page"
+        className="chat-button"
       >
         <img src={imgSrc} alt={'test icon'} style={imgStyle}/>
-        Click here to connect with a Chatter
+        Click Here for Help
       </Link>
       </h4>
 
