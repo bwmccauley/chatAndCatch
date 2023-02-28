@@ -371,11 +371,11 @@ h5,
 h6 {
   font-family: 'Chalkduster', fantasy ;
   margin: 0 0 0.5rem;
-  line-height: 1.25;
+  line-height: 1.55;
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.45rem;
 }
 
 h2 {
@@ -920,11 +920,11 @@ a:hover {
 
 /* BACKGROUND UTILS */
 .bg-primary {
-  background-color: #9c9098 !important;
+  background-color: #f1a2d4 !important;
 }
 
 .bg-info {
-  background-color: #f3ff0e !important;
+  background-color: #f8ff76 !important;
 }
 
 .bg-danger {
@@ -932,7 +932,7 @@ a:hover {
 }
 
 .bg-light {
-  background-color: #d9e9e8 !important;
+  background-color: #eeffc5 !important;
 }
 
 .bg-dark {
@@ -988,7 +988,7 @@ a:hover {
 }
 
 .btn:hover {
-  background-color: #cecece;
+  background-color: #b8b8b8;
 }
 
 .btn.btn-squared {

@@ -14,6 +14,7 @@ const typeDefs = gql`
     thoughtText: String
     thoughtAuthor: String
     createdAt: String
+    smile: Int
     comments: [Comment]!
   }
 
@@ -43,6 +44,7 @@ const typeDefs = gql`
     addThought(thoughtText: String!): Thought
     addComment(thoughtId: ID!, commentText: String!): Thought
     removeThought(thoughtId: ID!): Thought
+    addSmile(thoughtId: ID!): Thought
     removeComment(thoughtId: ID!, commentId: ID!): Thought
   }
 `;

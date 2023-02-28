@@ -19,6 +19,11 @@ const thoughtSchema = new Schema({
     default: Date.now,
     get: (timestamp) => dateFormat(timestamp),
   },
+  smile: {
+    type: Number, 
+    default: 0
+  },
+  
   comments: [
     {
       commentText: {

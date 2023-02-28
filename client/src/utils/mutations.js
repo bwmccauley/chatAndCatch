@@ -54,3 +54,12 @@ export const ADD_COMMENT = gql`
     }
   }
 `;
+
+export const ADD_SMILE = gql`
+mutation Mutation($thoughtId: ID!) {
+  addSmile(thoughtId: $thoughtId) {
+    _id
+    smile
+  }
+}
+`;

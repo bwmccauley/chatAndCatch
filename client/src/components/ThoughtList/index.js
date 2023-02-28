@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useMutation } from '@apollo/client';
+import { ADD_SMILE } from '../../utils/mutations';
+import smile from "../../images/smiley.png";
 
 const ThoughtList = ({
   thoughts,
@@ -7,10 +10,10 @@ const ThoughtList = ({
   showTitle = true,
   showUsername = true,
 }) => {
+  const [ addSmile, {error}] = useMutation(ADD_SMILE)
   if (!thoughts.length) {
     return <h3>No Thoughts Yet</h3>;
   }
-
   return (
     <div>
       {showTitle && <h3>{title}</h3>}
@@ -38,6 +41,17 @@ const ThoughtList = ({
             </h4>
             <div className="card-body bg-light p-2">
               <p>{thought.thoughtText}</p>
+            </div>
+            <div className="card-body bg-light p-2">
+              <p><a href="#" className="" onClick={
+                 async (event)=> {
+                  event.preventDefault();
+                  await addSmile({
+                    variables: {thoughtId:thought._id}
+                  })
+window.location.reload()
+                }
+              }><img src={smile} alt={"smile"}/>{thought.smile}</a></p>
             </div>
             <Link
               className="btn btn-primary btn-block btn-squared"
