@@ -21,14 +21,12 @@ const Footer = () => {
           </button>
         )}
       <h4>
-        <Link
-        to="/chat"
-        title="chat page"
-        className="chat-button"
-      >
+        
+       
+      
         <img src={imgSrc} alt={'test icon'} style={imgStyle}/>
-        Click Here for Help
-      </Link>
+        
+      
       </h4>
 
         <h4>
