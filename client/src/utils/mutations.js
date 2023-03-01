@@ -63,3 +63,12 @@ mutation Mutation($thoughtId: ID!) {
   }
 }
 `;
+
+export const ADD_FROWN = gql`
+mutation Mutation($thoughtId: ID!) {
+  addFrown(thoughtId: $thoughtId) {
+    _id
+    frown
+  }
+}
+`;

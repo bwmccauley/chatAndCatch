@@ -131,6 +131,24 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+   
+    addFrown: async (parent, { thoughtId }, context) => {
+      if (context.user) {
+        return Thought.findOneAndUpdate(
+          { _id: thoughtId },
+          {
+            $inc: {
+              frown: 1,
+            },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
   },
 };
 

@@ -23,6 +23,10 @@ const thoughtSchema = new Schema({
     type: Number, 
     default: 0
   },
+  frown: {
+    type: Number,
+    default: 0
+  },
   
   comments: [
     {

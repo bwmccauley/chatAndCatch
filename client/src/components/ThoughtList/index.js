@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_SMILE } from '../../utils/mutations';
-import smile from "../../images/smiley.png";
+import { ADD_FROWN } from '../../utils/mutations';
+import smile from "../../images/smiley.png"; 
+import frown from "../../images/frown.png";
 
 const ThoughtList = ({
   thoughts,
@@ -11,6 +13,7 @@ const ThoughtList = ({
   showUsername = true,
 }) => {
   const [ addSmile, {error}] = useMutation(ADD_SMILE)
+  const [ addFrown, ] = useMutation(ADD_FROWN)
   if (!thoughts.length) {
     return <h3>No Thoughts Yet</h3>;
   }
@@ -43,7 +46,7 @@ const ThoughtList = ({
               <p>{thought.thoughtText}</p>
             </div>
             <div className="card-body bg-light p-2">
-              <p><a href="#" className="" onClick={
+              <p><a href="#" className="p-5" onClick={
                  async (event)=> {
                   event.preventDefault();
                   await addSmile({
@@ -51,8 +54,18 @@ const ThoughtList = ({
                   })
 window.location.reload()
                 }
-              }><img src={smile} alt={"smile"}/>{thought.smile}</a></p>
+              }><img src={smile} width={25} height={25} display alt={"smile"}/>{thought.smile}</a>
+              <a href="#" className="p-5" onClick={
+                 async (event)=> {
+                  event.preventDefault();
+                  await addFrown({
+                    variables: {thoughtId:thought._id}
+                  })
+window.location.reload()
+                }
+              }><img src={frown} width={25} height={25} alt={"frown"}/>{thought.frown}</a></p>
             </div>
+            
             <Link
               className="btn btn-primary btn-block btn-squared"
               to={`/thoughts/${thought._id}`}
@@ -60,6 +73,9 @@ window.location.reload()
               Join the discussion on this thought.
             </Link>
           </div>
+
+          
+          
         ))}
     </div>
   );

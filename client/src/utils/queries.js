@@ -11,6 +11,7 @@ export const QUERY_USER = gql`
         thoughtText
         createdAt
         smile
+        frown
       }
     }
   }
@@ -24,6 +25,7 @@ export const QUERY_THOUGHTS = gql`
       thoughtAuthor
       createdAt
       smile
+      frown
     }
   }
 `;
@@ -36,6 +38,7 @@ export const QUERY_SINGLE_THOUGHT = gql`
       thoughtAuthor
       createdAt
       smile
+      frown
       comments {
         _id
         commentText
@@ -58,6 +61,7 @@ export const QUERY_ME = gql`
         thoughtAuthor
         createdAt
         smile
+        frown
       }
     }
   }
